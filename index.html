@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakshi Vanakundre — Frontend Developer</title>
+<meta name="description" content="Portfolio of Sakshi Vanakundre — Frontend Developer, Machine Learning enthusiast and CSE student at KLE Institute of Technology. Explore projects, skills, achievements and certifications.">
+<meta name="keywords" content="Sakshi Vanakundre, portfolio, frontend developer, machine learning, KLE Institute of Technology, VTU, CSE student">
+<meta name="author" content="Sakshi Vanakundre">
+<meta property="og:title" content="Sakshi Vanakundre">
+<meta property="og:description" content="Explore my projects, skills and achievements.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===== Loading Screen ===== -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-bracket">&lt;</span>
+    <span class="loader-text">Sakshi<span class="loader-dot">.</span>dev</span>
+    <span class="loader-bracket">/&gt;</span>
+  </div>
+  <div class="loader-bar"><span id="loaderProgress"></span></div>
+</div>
+
+<!-- ===== Scroll Progress ===== -->
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+
+<!-- ===== Navbar ===== -->
+<header class="navbar" id="navbar">
+  <nav class="nav-container" aria-label="Primary navigation">
+    <a href="#home" class="nav-logo">
+      <span class="mono">&lt;</span>Sakshi<span class="accent-text">.dev</span><span class="mono">/&gt;</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
+        <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+      </button>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="pageTop">
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-text reveal-up">
+        <h1 class="hero-greeting">Hi, I'm <span class="gradient-text">Sakshi Vanakundre</span></h1>
+        <h2 class="hero-typing">
+          <span id="typedText"></span><span class="cursor-blink">|</span>
+        </h2>
+        <h3>Building elegant web experiences powered by intelligent solutions</h3>
+
+        <div class="hero-cta">
+          <a href="assets/Sakshi Vanakundre.pdf" class="btn btn-glass ripple" id="downloadResumeBtn" download>
+            <span>Download Resume</span>
+          </a>
+          <a href="#contact" class="btn btn-outline ripple">
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/Sakshi-AV" target="_blank" rel="noopener" aria-label="GitHub" class="social-orb"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.36 9.36 0 0 1 5 0c1.9-1.32 2.74-1.05 2.74-1.05.56 1.42.21 2.47.1 2.73.65.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+          <a href="https://www.linkedin.com/in/sakshi-a-vanakundre-0703872b5" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-orb"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.94 6.5A2 2 0 1 1 5 4.5a2 2 0 0 1 1.94 2ZM5.2 8.75h3.48V20H5.2V8.75Zm5.75 0h3.34v1.54h.05c.47-.88 1.6-1.8 3.29-1.8 3.52 0 4.17 2.32 4.17 5.34V20h-3.48v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96V20h-3.35V8.75Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-scale">
+        <div class="profile-photo">
+          <img src="assets/photo.jpeg" alt="Sakshi Vanakundre" class="profile-photo-img">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section class="section" id="about">
+    <div class="section-container">
+      <h2 class="section-title reveal-up">About <span class="gradient-text">Me</span></h2>
+
+      <div class="about-grid">
+        <div class="about-content reveal-right">
+          <p class="about-intro">Hi, I'm Sakshi Vanakundre, a Computer Science and Engineering student with a passion for building modern, user-friendly web applications and exploring the possibilities of Machine Learning. I enjoy transforming ideas into responsive, visually appealing, and impactful digital experiences.
+My interests lie in Frontend Development, Software Development, and AI/ML, and I'm constantly learning new technologies to improve my technical and problem-solving skills.
+Currently, I'm pursuing my B.E. in Computer Science with a strong academic record and working on projects that combine web development with machine learning, such as protein estimation in wheat samples and predictive analytics applications. These experiences have strengthened my ability to design, develop, and deliver practical software solutions.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="glass-card info-card">
+              <h3 class="mono info-label">Education</h3>
+              <p>B.E., Computer Science &amp; Engineering<br>
+                KLE Institute of Technology, Hubballi<br>
+                Visvesvaraya Technological University (VTU)<br>
+                CGPA: <strong>9.23</strong></p>
+            </div>
+            <div class="glass-card info-card">
+              <h3 class="mono info-label">Objective</h3>
+              <p>To build products at the intersection of great engineering and intelligent
+                systems, and to keep learning in public.</p>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="section-container">
+      <h2 class="section-title reveal-up">My <span class="gradient-text">Skills</span></h2>
+      <div class="skills-category reveal-up">
+        <h3 class="mono category-title">Frontend</h3>
+        <div class="skills-grid">
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">🌐</span>
+            <h4>HTML5</h4>
+          </div>
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">🎨</span>
+            <h4>CSS3</h4>
+          </div>
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">⚡</span>
+            <h4>JavaScript</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category reveal-up">
+        <h3 class="mono category-title">Programming</h3>
+        <div class="skills-grid">
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">🐍</span>
+            <h4>Python</h4>
+          </div>
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">☕</span>
+            <h4>Java</h4>
+          </div>
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">🔧</span>
+            <h4>C</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category reveal-up">
+        <h3 class="mono category-title">Database</h3>
+        <div class="skills-grid">
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">🐬</span>
+            <h4>MySQL</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category reveal-up">
+        <h3 class="mono category-title">Tools</h3>
+        <div class="skills-grid">
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" width="32" height="32"></span>
+            <h4>Git</h4>
+          </div>
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon"><img src="https://cdn.simpleicons.org/github" alt="GitHub" width="32" height="32"></span>
+            <h4>GitHub</h4>
+          </div>
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">💻</span>
+            <h4>VS Code</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category reveal-up">
+        <h3 class="mono category-title">Additional</h3>
+        <div class="skills-grid">
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">🤖</span>
+            <h4>Machine Learning</h4>
+          </div>
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">🧩</span>
+            <h4>Data Structures</h4>
+          </div>
+          <div class="glass-card skill-card tilt">
+            <span class="skill-icon">🧮</span>
+            <h4>Algorithms</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section class="section" id="projects">
+    <div class="section-container">
+      <h2 class="section-title reveal-up">Featured <span class="gradient-text">Projects</span></h2>
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="glass-card project-card tilt" data-category="web">
+          <div class="project-image" style="background:linear-gradient(135deg,var(--primary),var(--secondary));">
+            <span class="project-image-icon">💻</span>
+          </div>
+          <div class="project-body">
+            <h3>Graph based Fraud Detection</h3>
+            <p>A graph-based machine learning system that models financial transactions as networks to detect fraudulent activities by analyzing relationships, hidden patterns, and suspicious transaction behavior.</p>
+            <div class="tech-tags">
+              <span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sakshi-AV/graph-based-fraud-detection" target="_blank" rel="noopener" class="btn btn-sm btn-outline ripple">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card tilt" data-category="ml">
+          <div class="project-image" style="background:linear-gradient(135deg,var(--accent),var(--primary));">
+            <span class="project-image-icon">🧠</span>
+          </div>
+          <div class="project-body">
+            <h3>Estimation of Protein content in Wheat</h3>
+            <p>A ML-based web application to estimate the protein content of wheat samples from image data.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>Javascript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sakshi-AV/Wheat-Protein" target="_blank" rel="noopener" class="btn btn-sm btn-outline ripple">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card tilt" data-category="python">
+          <div class="project-image" style="background:linear-gradient(135deg,var(--secondary),var(--accent));">
+            <span class="project-image-icon">📊</span>
+          </div>
+          <div class="project-body">
+            <h3>Wine Quality Prediction System</h3>
+            <p>A machine learning-based Wine Quality Prediction System that predicts wine quality using physicochemical properties, featuring an interactive web interface for real-time predictions and data visualization.</p>
+            <div class="tech-tags">
+              <span>Python</span><span>Streamlit</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sakshi-AV/Wine-Quality-Prediction" target="_blank" rel="noopener" class="btn btn-sm btn-outline ripple">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card tilt" data-category="web">
+          <div class="project-image" style="background:linear-gradient(135deg,var(--primary),var(--accent));">
+            <span class="project-image-icon">📋</span>
+          </div>
+          <div class="project-body">
+            <h3>Get Live Weather Desktop Notifications</h3>
+            <p>A Python-based desktop application that provides live weather updates for any city using the OpenWeatherMap API.</p>
+            <div class="tech-tags">
+              <span>Python</span><span>Requests</span><span>OpenWeatherMap API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sakshi-AV/Weather-Notifications-on-Desktop" target="_blank" rel="noopener" class="btn btn-sm btn-outline ripple">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Certifications Section ===== -->
+  <section class="certificates" id="certifications">
+    <h2>My Certificates</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="card">
+                <img src="assets/NPTEL.jpeg" alt="">
+                <h3>Fundamentals of OOPs</h3>
+                <p>NPTEL</p>
+            </div>
+            <div class="card">
+                <img src="assets/Samsung.jpeg" alt="">
+                <h3>Coding and Programming</h3>
+                <p>Samsung Innovation Campus</p>
+            </div>
+            <div class="card">
+                <img src="assets/Infosys Springboard.jpeg" alt="">
+                <h3>Data Structures and Algorithms</h3>
+                <p>Infosys Springboard</p>
+            </div>
+            <div class="card">
+                <img src="assets/Hackerrank.jpeg" alt="">
+                <h3>Problem Solving(Basic)</h3>
+                <p>Hackerrank</p>
+            </div>
+            <div class="card">
+                <img src="assets/AI-HP.jpeg" alt="">
+                <h3>AI for beginners</h3>
+                <p>HP</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="section" id="contact">
+    <div class="section-container">
+      <h2 class="section-title reveal-up">Let's <span class="gradient-text">Connect</span></h2>
+      <p class="section-subtitle reveal-up">Have a project in mind, or just want to say hi? My inbox is open.</p>
+
+      <div class="contact-grid">
+        <div class="glass-card contact-form-card reveal-left">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+              <span class="error-msg" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+              <span class="error-msg" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?">
+              <span class="error-msg" id="subjectError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me more..."></textarea>
+              <span class="error-msg" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary ripple full-width">Send Message</button>
+            <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contact-info reveal-right">
+          <div class="glass-card contact-info-card">
+            <h3 class="mono">Contact Details</h3>
+            <ul class="contact-list">
+              <li><span class="contact-icon">✉️</span> sakshiav10@gmail.com</li>
+              <li><span class="contact-icon">📱</span> +91 9148701153</li>
+            </ul>
+          </div>
+
+          <div class="glass-card contact-info-card">
+            <h3 class="mono">Find Me Online</h3>
+            <div class="social-row">
+              <a href="https://github.com/Sakshi-AV" target="_blank" rel="noopener" aria-label="GitHub" class="social-orb"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.36 9.36 0 0 1 5 0c1.9-1.32 2.74-1.05 2.74-1.05.56 1.42.21 2.47.1 2.73.65.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+              <a href="https://www.linkedin.com/in/sakshi-a-vanakundre-0703872b5" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-orb"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.94 6.5A2 2 0 1 1 5 4.5a2 2 0 0 1 1.94 2ZM5.2 8.75h3.48V20H5.2V8.75Zm5.75 0h3.34v1.54h.05c.47-.88 1.6-1.8 3.29-1.8 3.52 0 4.17 2.32 4.17 5.34V20h-3.48v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96V20h-3.35V8.75Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <a href="#home" class="nav-logo footer-logo">
+      <span class="mono">&lt;</span>Sakshi<span class="accent-text">.dev</span><span class="mono">/&gt;</span>
+    </a>
+    <p class="footer-copy">© <span id="footerYear"></span> Sakshi Vanakundre. Crafted with HTML, CSS &amp; JavaScript.</p>
+    <div class="social-row">
+      <a href="https://github.com/Sakshi-AV" target="_blank" rel="noopener" aria-label="GitHub" class="social-orb"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.36 9.36 0 0 1 5 0c1.9-1.32 2.74-1.05 2.74-1.05.56 1.42.21 2.47.1 2.73.65.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+      <a href="https://www.linkedin.com/in/sakshi-a-vanakundre-0703872b5" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-orb"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M6.94 6.5A2 2 0 1 1 5 4.5a2 2 0 0 1 1.94 2ZM5.2 8.75h3.48V20H5.2V8.75Zm5.75 0h3.34v1.54h.05c.47-.88 1.6-1.8 3.29-1.8 3.52 0 4.17 2.32 4.17 5.34V20h-3.48v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96V20h-3.35V8.75Z"/></svg></a>
+  </div>
+</footer>
+
+<!-- ===== Back to Top ===== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
+</button>
+
+<!-- ===== Confetti Canvas ===== -->
+<canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+<script src="js/theme.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
